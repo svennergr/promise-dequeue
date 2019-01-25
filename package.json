@@ -39,6 +39,8 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dequeue": "^1.0.5"
+  },
   "license": "MIT"
 }
