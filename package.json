@@ -1,14 +1,15 @@
 {
   "author": "Mikhail Davydov <i@azproduction.ru>",
-  "description": "Promise-based queue",
-  "name": "promise-queue",
+  "description": "Promise-based dequeue",
+  "name": "promise-dequeue",
   "version": "2.2.5",
   "contributors": [
-    "Mikhail Davydov <i@azproduction.ru>"
+    "Mikhail Davydov <i@azproduction.ru>",
+    "Volkov Ilya <ilya.inflight@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/azproduction/promise-queue.git"
+    "url": "git://github.com/Infl1ght/promise-dequeue.git"
   },
   "engines": {
     "node": ">= 0.8.0"
