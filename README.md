@@ -1,13 +1,13 @@
 # promise-queue [![NPM Version](https://badge.fury.io/js/promise-queue.png)](https://npmjs.org/package/promise-queue) [![Build Status](https://travis-ci.org/azproduction/promise-queue.png?branch=master)](https://travis-ci.org/azproduction/promise-queue) [![Coverage Status](https://coveralls.io/repos/azproduction/promise-queue/badge.png?branch=master)](https://coveralls.io/r/azproduction/promise-queue) [![Dependency Status](https://gemnasium.com/azproduction/promise-queue.png)](https://gemnasium.com/azproduction/promise-queue)
 
-Promise-based queue
+This is fork of [promise-queue](https://github.com/promise-queue/promise-queue), promise-based queue. Main difference from original project is that Javascript array replaced by double-ended queue (that increases speed) 
 
 ## Installation
 
-`promise-queue` can be installed using `npm`:
+`promise-dequeue` can be installed using `npm`:
 
 ```
-npm install promise-queue
+npm install promise-dequeue
 ```
 
 ## Interface
