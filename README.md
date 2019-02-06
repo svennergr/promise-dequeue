@@ -1,6 +1,6 @@
 # promise-dequeue [![NPM Version](https://badge.fury.io/js/promise-dequeue.png)](https://www.npmjs.com/package/promise-dequeue)
 
-This is fork of [promise-queue](https://github.com/promise-queue/promise-queue), promise-based queue. Main difference from original project is that Javascript array replaced by double-ended queue. It increases perfomance on highload queues, this [test](https://repl.it/@Infl1ght/promise-queque-test) shows difference with big amount of queued promises.
+This is fork of [promise-queue](https://github.com/promise-queue/promise-queue), promise-based queue. Main difference from original project is that Javascript array replaced by double-ended queue. It increases perfomance on highload queues, this [test](https://repl.it/@Infl1ght/promise-queque-test) shows difference with big amount of queued promises. Look at using this package instead of the original, if performance is critical for you.
 
 ## Installation
 
