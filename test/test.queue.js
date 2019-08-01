@@ -346,34 +346,40 @@ describe("queue", function() {
             queue
                 .add(
                     () =>
-                        new Promise(resolve => setTimeout(() => resolve(), 10))
+                        new Promise(resolve => {
+                            console.log("1", queue.getQueueLength());
+                            setTimeout(() => resolve(), 10);
+                        })
                 )
                 .then(() => console.log("here1"), function(error) {
-                    console.log("here4", error);
                     expect(error).to.be.instanceOf(TimeoutError);
                 });
+            console.log("1a", queue.getQueueLength());
             queue
                 .add(
                     () =>
-                        new Promise(resolve =>
-                            setTimeout(() => resolve(), 6000)
-                        )
+                        new Promise(resolve => {
+                            console.log("2", queue.getQueueLength());
+                            setTimeout(() => resolve(), 6000);
+                        })
                 )
                 .then(
                     function() {
-                        console.log("here2");
                         throw new Error("It should be rejected");
                     },
                     function(error) {
-                        console.log("here3", error);
                         expect(error).to.be.instanceOf(TimeoutError);
                     }
                 );
+            console.log("2a", queue.getQueueLength());
             // this should also fail, since the request before takes too long
             queue
                 .add(
                     () =>
-                        new Promise(resolve => setTimeout(() => resolve(), 10))
+                        new Promise(resolve => {
+                            console.log("3", queue.getQueueLength());
+                            setTimeout(() => resolve(), 10);
+                        })
                 )
                 .then(
                     () => {},
@@ -381,15 +387,18 @@ describe("queue", function() {
                         expect(error).to.be.instanceOf(TimeoutError);
                     }
                 );
+            console.log("3a", queue.getQueueLength());
 
             // this should not run into error
             setTimeout(() => {
+                console.log("4a", queue.getQueueLength());
                 queue
                     .add(
                         () =>
-                            new Promise(resolve =>
-                                setTimeout(() => resolve(), 10)
-                            )
+                            new Promise(resolve => {
+                                console.log("4", queue.getQueueLength());
+                                setTimeout(() => resolve(), 10);
+                            })
                     )
                     .then(done, e => {
                         expect(e).not.to.be.instanceOf(TimeoutError);
